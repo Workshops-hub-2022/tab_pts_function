@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 // math.c
 int addition(int a, int b);
@@ -21,6 +22,6 @@ int power(int a, int b);
 
 //tab_pts_func.c
 char *make_controler_tab();
-bool do_math(int a, int b, char action);
+void do_math(int a, int b, char action);
 
 #endif /* !MY_H_ */

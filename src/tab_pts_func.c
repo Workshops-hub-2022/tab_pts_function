@@ -7,9 +7,8 @@
 
 #include "my.h"
 
-bool do_math(int a, int b, char action)
+void do_math(int a, int b, char action)
 {
-    bool error = true;
     char *controler = "+-*/^";
     int index = 0;
     int res = 0;
@@ -24,10 +23,10 @@ bool do_math(int a, int b, char action)
     while (controler[index] != '\0'){
         if (controler[index] == action) {
             res = tab[index](a, b);
-            error = false;
-            printf("le resultat de %i %c %i = %i\n", a, action, b, res);
+            printf("Le resultat de %i %c %i = %i\n", a, action, b, res);
+            return;
         }
         index++;
     }
-    return (error);
+    printf("Operation inconnue\n");
 }
